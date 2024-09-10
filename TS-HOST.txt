@@ -1,17 +1,23 @@
 def encode_credentials(username, password):
+    # Encode each character by shifting its ASCII value by 1
     encoded_username = "".join([chr(ord(char) + 1) for char in username])
     encoded_password = "".join([chr(ord(char) + 1) for char in password])
     return encoded_username, encoded_password
 
 def login():
-    correct_username = "SATISH-BHAI"
-    correct_password = "T.S.BRAND"
-    username_input = input("Enter username:")
-    password_input = input("Enter password:")
+    # Correct username and password
+    correct_username = "ANURAG"
+    correct_password = "MY_PASSWORD"  # Change this to your desired password
+    # Get user input
+    username_input = input("Enter username: ")
+    password_input = input("Enter password: ")
+    # Encode the correct username and password
     encoded_username, encoded_password = encode_credentials(correct_username, correct_password)
+    # Check if the inputs match the encoded credentials
     if username_input == encoded_username and password_input == encoded_password:
         print("Login successful!")
     else:
         print("Incorrect username or password. Please try again.")
 
+# Call the login function
 login()
