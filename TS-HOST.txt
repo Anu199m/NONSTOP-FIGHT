@@ -7,7 +7,7 @@ def encode_credentials(username, password):
 def login():
     # Correct username and password
     correct_username = "ANURAG"
-    correct_password = "MY_PASSWORD"  # Change this to your desired password
+    correct_password = "ANURA HERE"  # Change this to your desired password
     # Get user input
     username_input = input("Enter username: ")
     password_input = input("Enter password: ")
